@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Înregistrare și Descărcare Video</title>
+</head>
+<body>
+
+<video id="camera" width="640" height="480" autoplay></video>
+<button id="startRecord">Începe Înregistrarea</button>
+<button id="stopRecord" disabled>Oprire Înregistrare</button>
+<button id="download" disabled>Descarcă Video</button>
+
+<script>
+  let cameraStream = null;
+  let mediaRecorder = null;
+  let videoChunks = [];
+  let downloadLink = document.createElement('a');
+
+  document.getElementById('startRecord').addEventListener('click', function() {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(function(stream) {
+        cameraStream = stream;
+        document.getElementById('camera').srcObject = stream;
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = function(e) {
+          videoChunks.push(e.data);
+        };
+        mediaRecorder.start();
+        document.getElementById('stopRecord').disabled = false;
+        document.getElementById('startRecord').disabled = true;
+      }).catch(function(err) {
+        console.error("Eroare la accesarea camerei: ", err);
+      });
+  });
+
+  document.getElementById('stopRecord').addEventListener('click', function() {
+    mediaRecorder.stop();
+    document.getElementById('stopRecord').disabled = true;
+    document.getElementById('download').disabled = false;
+  });
+
+  document.getElementById('download').addEventListener('click', function() {
+    const videoBlob = new Blob(videoChunks, { type: 'video/mp4' });
+    const videoUrl = URL.createObjectURL(videoBlob);
+    downloadLink.href = videoUrl;
+    downloadLink.download = 'inregistrare.mp4';
+    downloadLink.click();
+  });
+
+  window.onunload = function() {
+    if (cameraStream) {
+      cameraStream.getTracks().forEach(track => track.stop());
+    }
+  };
+</script>
+
+</body>
+</html>

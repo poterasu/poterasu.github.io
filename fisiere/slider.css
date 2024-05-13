@@ -1,0 +1,12 @@
+.slider {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stilul pentru textul negru */
+.slider.black-text {
+    color: black;
+    background-color: white;
+}

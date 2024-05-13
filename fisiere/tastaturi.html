@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tastaturile</title>
+<style>
+  body {
+            font-size: 20px;}
+</style>
+</head>
+<body>
+    <p><a href="principal.html">Mergi înapoi la pagina principală</a></p>
+ <h1 align="center">Tastaturile sunt dispozitive periferice de intrare folosite pentru a introduce text și comenzi</h1>
+<dl>
+    <dt>Istoria Tastaturii</dt>
+    <dd>
+        <ul>
+            <li>Tastaturile au originat de la mașinile de scris, împrumutând layout-ul lor.</li>
+            <img src="https://m.media-amazon.com/images/I/71msUw3sxlL.jpg"width="300">
+            <li>Tastatura modernă a fost popularizată odată cu apariția computerelor personale.</li>
+            <img src="https://i.pinimg.com/originals/3b/59/c3/3b59c3bb24b03a90d9c09a88079607ba.png"width=300>
+        </ul>
+    </dd>
+    <dt>Tipuri de Tastaturi</dt>
+    <dd>
+        <ul>
+            <li>Tastaturile mecanice folosesc întrerupătoare individuale pentru fiecare tastă.</li>
+            <img  src="https://pluspng.com/img-png/keyboard-hd-png-gh60-turb005-png-1920.png" width="300">
+            <li>Tastaturile cu membrană au un singur strat de cauciuc sau silicon sub taste, care închide un circuit electric la apăsare,au design mai compact.</li>
+            <img src="https://www.downloadclipart.net/medium/apple-keyboard-png.png" width="300">
+            <li>Tastaturile ergonomice sunt proiectate pentru a oferi o poziție mai naturală a mâinilor și încheieturilor.</li>
+            <img src="https://th.bing.com/th/id/R.017a88204a84c66bbd40cfec856eca4d?rik=SVXALa4if7xZOg&pid=ImgRaw&r=0" width="300">
+        </ul>
+    </dd>
+</dl>
+<p>casuta de mai jos va arata mesajul scrris ca o notificare
+</p>
+<input type="text" id="messageBox" placeholder="Scrie un mesaj aici...">
+<button onclick="submitMessage()">Trimite Mesaj</button>
+
+<script>
+function submitMessage() {
+  var message = document.getElementById('messageBox').value;
+  alert( message);
+}
+</script>
+</body>
+</html>
