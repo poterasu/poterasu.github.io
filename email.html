@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Trimite Email cu API-ul Gmail</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        function start() {
+            gapi.client.init({
+                'apiKey': 'AIzaSyDAy6aQ2lxZ_AsRtljUMHIKbCj8RF0sWV4',
+                'clientId': '964436180389-2r9em62rvj927jv6rooit01g1caddblp.apps.googleusercontent.com',
+                'scope': 'https://www.googleapis.com/auth/gmail.send',
+            }).then(function() {
+                gapi.auth2.getAuthInstance().signIn();
+            });
+        }
+
+        // Trimite email-ul.
+        function sendEmail() {
+            var email = '';
+            var header = 'To: ' + document.getElementById('recipient').value + '\r\n';
+            header += 'Subject: ' + document.getElementById('subject').value + '\r\n';
+            header += 'Content-Type: text/plain; charset=utf-8' + '\r\n';
+            header += 'Content-Transfer-Encoding: base64' + '\r\n\r\n';
+            var message = document.getElementById('message').value;
+            
+            email += header;
+            email += btoa(unescape(encodeURIComponent(message)));
+
+            var request = gapi.client.gmail.users.messages.send({
+                'userId': 'me',
+                'resource': {
+                    'raw': email
+                }
+            });
+
+            request.execute(function(response) {
+                console.log(response);
+            });
+        }
+
+        // Încărcați clientul Google API.
+        function handleClientLoad() {
+            gapi.load('client:auth2', start);
+        }
+    </script>
+</head>
+<body onload="handleClientLoad()">
+    <input type="email" id="recipient" placeholder="Adresa destinatarului">
+    <input type="text" id="subject" placeholder="Subiect">
+    <textarea id="message" placeholder="Mesajul dvs."></textarea>
+    <button onclick="sendEmail()">Trimite Email</button>
+</body>
+</html>
