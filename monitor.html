@@ -2,7 +2,30 @@
 <head>
     <style>
         body {
-            font-size: 20px;}
+              font-size: 30px;}img{
+display:block;
+margin-left:auto;
+margin-right:auto;}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
     </style>
 <title>display</title>
 <script>
@@ -14,7 +37,11 @@ function schimba_culoarea() {
 </script>
 </head>
 <body>
-    <p><a href="index.html">Mergi înapoi la pagina principală</a></p>
+    <div class="topnav">
+        <a href="index.html">Mergi înapoi la pagina principală</a>
+        <a href="chestionar.html">test</a>
+        <a href="monitor.html">pagina monitor</a>
+      </div>
     <h1 align="center">Displayurile</h1>
     <h2>Displayurile sunt dispozitive periferice de ieșire folosite pentru a arăta vizual date.</h2>
     <p>Istoric:</p>
@@ -29,7 +56,7 @@ function schimba_culoarea() {
         <dd>
             <ul>
                 <li>aceste display-uri contineau tunuri de electroni care emitau fascicule de electroni pentru a arata o imagine.</li>
-                <img src="monitor.gif">
+                <img src="monitor.gif" width="500">
                 <li>au fost inlocuite de monitoare lcd din cauza consumului redus de energie,designului compact,si rezolutiei ridicate.</li>
             </ul>
         </dd>
@@ -38,7 +65,7 @@ function schimba_culoarea() {
             <ul>
                 <li>Aceste display-uri conțin cristale care pot bloca lumina emisă în spatele lor.</li>
                 <li>sunt cel mai popular tip de display,fiind iefitin si durabil</li>
-                <img src="lcd.webp" width="400">
+                <img src="lcd.webp" width="500">
             </ul>
         </dd>
 
@@ -48,7 +75,7 @@ function schimba_culoarea() {
     <ul>
         <li>Aceste display-uri folosesc micro-capsule care conțin pigmenți albi și negri într-un lichid clar.</li>
         <li>Sunt folosite la citirea cărților electronice, deoarece folosesc energie doar când este schimbată imaginea și au proprietăți similare cu hârtia.</li>
-        <img src="https://www.eink.com/upload/2023_03_20/3_20230320083211xzzzo41hF1.gif" width="400">
+        <img src="https://www.eink.com/upload/2023_03_20/3_20230320083211xzzzo41hF1.gif" width="500">
     </ul>
 </dd>
 <button onclick="schimba_culoarea()">apasa pe buton pentru a schimba culoarea paginii</button>
