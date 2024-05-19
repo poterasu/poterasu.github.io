@@ -4,14 +4,39 @@
     <title>camera</title>
     <style>
      body {
-              font-size: 30px;}img{
+              font-size: 30px;
+              color: white;
+              background-image: url('wood.jpg');}img{
 display:block;
 margin-left:auto;
 margin-right:auto;}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;}
     </style>
 </head>
 <body>
-<p><a href="index.html">Mergi înapoi la pagina principală</a></p>
+  <div class="topnav">
+    <a href="index.html">Mergi înapoi la pagina principală</a>
+    <a href="chestionarcamera.html">test</a>
+    <a href="camera.html">pagina boxe</a>
+  </div>
 <h1 align="center">Camerele Digitale sunt Dispozitive Periferice de Intrare folosite pentru a Captura Imagini și Video</h1>
 <dl>
     <dt>Istoria Camerei Digitale</dt>
@@ -20,20 +45,20 @@ margin-right:auto;}
             <li>Prima camera digitala a fost dezovoltata in 1975.</li>
             <img src="https://th.bing.com/th/id/OIP.5U_b9zZB9dI9tBk8ZkrdCQHaFj?rs=1&pid=ImgDetMain" width="500">
             <li>Camerele digitale moderne au devenit populare la începutul anilor 2000.</li>
-            <img src="https://th.bing.com/th/id/OIP.aV9j4jqtd1bhcPAQxmmFnwHaEK?rs=1&pid=ImgDetMain" width="500">
+            <img src="camera.jpg" width="500">
         </ul>
     </dd>
     <dt>Tipuri de Camere Digitale</dt>
     <dd>
         <ul>
             <li>Camerele DSLR folosesc un sistem de oglinzi pentru a redirecționa lumina din obiectiv către senzor.</li>
-            <img src="https://th.bing.com/th/id/OIP.0lxRsfgkqLRRKOtUJqEjHQHaHa?rs=1&pid=ImgDetMain" width="500">
+            <img src="https://th.bing.com/th/id/R.458e0cd23aca735e8352f83d738bf2d2?rik=dlMhfOD8YRKP0Q&pid=ImgRaw&r=0" width="500">
             <li>Camerele mirrorless nu au sistem de oglinzi, ceea ce le face mai compacte și mai ușoare.</li>
-            <img src="https://www.bhphotovideo.com/images/images1500x1500/canon_1725c001_eos_m6_mirrorless_camera_1318780.jpg" width="500">
+            <img src="https://i1.adis.ws/i/canon/m5-transparency?w=800&h=800" width="500">
         </ul>
     </dd>
 </dl>
-<a>apasa pe buton pentru a inregistra un sunet. poate fi downloadat dupa ce e inregistat</a>
+<a>apasa pe buton pentru a inregistra un sunet,care poate fi downloadat dupa ce e inregistat</a>
 <video id="camera" width="640" height="480" autoplay></video>
 <button id="startRecord">Începe Înregistrarea</button>
 <button id="stopRecord" disabled>Oprire Înregistrare</button>

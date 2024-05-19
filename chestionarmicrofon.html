@@ -25,7 +25,7 @@
     background-color: #04AA6D;
     color: white;
   }</style>
-<title>Chestionar Display-uri</title>
+<title>Chestionar Microfoane</title>
 </head>
 <body>
     <body>
@@ -34,41 +34,41 @@
             <a href="chestionar.html">test</a>
             <a href="monitor.html">pagina monitor</a>
           </div>
-<form id="testdisplay">
-  <p>1. Ce tip de display a fost înlocuit de monitoarele LCD?</p>
+<form id="testmicrofoane">
+  <p>1. Care este principala funcție a unui microfon?</p>
   <select name="question1">
     <option value="false"></option>
-    <option value="true">Displayurile cu tuburi catodice</option>
-    <option value="false">E Ink</option>
-    <option value="false">LED</option>
-    <option value="false">OLED</option>
+    <option value="true">Captarea sunetului</option>
+    <option value="false">Redarea sunetului</option>
+    <option value="false">Amplificarea sunetului</option>
+    <option value="false">Filtrarea sunetului</option>
   </select>
 
-  <p>2. Ce proprietate importantă au display-urile E Ink?</p>
+  <p>2. Ce tip de microfon este frecvent folosit în înregistrările vocale și podcast-uri?</p>
   <select name="question2">
     <option value="false"></option>
-    <option value="false">Emite lumină proprie</option>
-    <option value="true">Folosesc energie doar când este schimbată imaginea</option>
-    <option value="false">Au culori vii</option>
-    <option value="false">Răspuns rapid la comenzi</option>
+    <option value="false">Microfonul condenser</option>
+    <option value="true">Microfonul dinamic</option>
+    <option value="false">Microfonul lavalier</option>
+    <option value="false">Microfonul shotgun</option>
   </select>
 
-  <p>3. Care este cel mai popular tip de display în prezent?</p>
+  <p>3. Care dintre următoarele caracteristici afectează sensibilitatea unui microfon?</p>
   <select name="question3">
     <option value="false"></option>
-    <option value="false">Displayurile cu tuburi catodice</option>
-    <option value="true">LCD-uri</option>
-    <option value="false">E Ink</option>
-    <option value="false">LED</option>
+    <option value="false">Dimensiunea fizică</option>
+    <option value="true">Tipul capsulei</option>
+    <option value="false">Lungimea cablului</option>
+    <option value="false">Culoarea carcasei</option>
   </select>
 
-  <p>4. Ce conțin display-urile LCD pentru a bloca lumina?</p>
+  <p>4. Ce reprezintă polaritatea unui microfon?</p>
   <select name="question4">
     <option value="false"></option>
-    <option value="false">Tuburi catodice</option>
-    <option value="true">Cristale</option>
-    <option value="false">Micro-capsule</option>
-    <option value="false">Dioduri emițătoare de lumină</option>
+    <option value="false">Numărul de canale</option>
+    <option value="true">Direcția în care microfonul captează sunetul</option>
+    <option value="false">Sensibilitatea la zgomot</option>
+    <option value="false">Frecvența de răspuns</option>
   </select>
 
   
@@ -84,7 +84,7 @@ function calculateScore() {
     'question3': 'true',
     'question4': 'true',
   };
-  var form = document.forms['testdisplay'];
+  var form = document.forms['testmicrofoane'];
   var score = 0;
 
   for (var question in correctAnswers) {

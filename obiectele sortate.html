@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiecte Electronice</title>
+    <style>
+        body {
+            text-align: center;
+            color: white;
+            background-image: url('wood.jpg');
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 300;
+        }
+        .input-container, .output-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .item {
+            margin: 10px;
+        }
+        .device-label {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .device-image {
+            width: 200px; /* Redimensionat la 200px */
+        }
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">pagina principala</a>
+        <a href="monitor.html">Monitor</a>
+        <a href="mouse.html">Mouse</a>
+        <a href="boxa.html">Boxe</a>
+        <a href="microfon.html">Microfon</a>
+        <a href="imprimanta.html">Imprimantă</a>
+        <a href="camera.html">Cameră</a>
+    </div>
+    <h1>Periferice PC</h1>
+    <h2>Apăsați pe imaginile de mai jos pentru detalii:</h2>
+    <div class="container">
+        <div class="input-container">
+            <p class="device-label">Dispozitive de intrare</p>
+            <a href="tastaturi.html">
+                <img src="tasta.png"width="200" alt="Tastatură" class="device-image">
+            </a>
+            <a href="mouse.html">
+                <img src="mouse.png"width="200" alt="Mouse" class="device-image">
+            </a>
+            <a href="microfon.html">
+                <img src="microfon.png"width="200" alt="Microfon" class="device-image">
+            </a>
+            <a href="camera.html">
+                <img src="camera.jpg" width="200" alt="Cameră" class="device-image">
+            </a>
+        </div>
+        <div class="output-container">
+            <p class="device-label">Dispozitive de ieșire</p>
+            <a href="monitor.html">
+                <img src="monitor.png"width="200" alt="Monitor" class="device-image">
+            </a>
+            <a href="boxa.html">
+                <img src="boxa.png" width="200" alt="Boxe" class="device-image">
+            </a>
+            <a href="imprimanta.html">
+                <img src="printer.png " width="200" alt="Imprimantă" class="device-image">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

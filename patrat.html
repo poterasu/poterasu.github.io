@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const box = document.getElementById('box');
+        let color = 'green';
+
+        box.addEventListener('scroll', () => {
+            color = 'blue';
+            box.style.backgroundColor = color;
+        });
+
+        box.addEventListener('dblclick', () => {
+            color = 'purple';
+            box.style.backgroundColor = color;
+        });
+
+        box.addEventListener('click', () => {
+            color = 'red';
+            box.style.backgroundColor = color;
+        });
+
+        // Reset button
+        const resetButton = document.createElement('button');
+        resetButton.textContent = 'Reset';
+        document.body.appendChild(resetButton);
+
+        resetButton.addEventListener('click', () => {
+            color = 'green';
+            box.style.backgroundColor = color;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Ghiceste Imaginea</title>
+<style>
+  /* stilurile rămân neschimbate */
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="question">
+    <img src="https://www.pngplay.com/wp-content/uploads/1/Letter-B-PNG-Background-Image.png" alt="Ghiceste Imaginea" width="300">
+  </div>
+  <div class="options">
+    <!-- Adăugați atributul data-correct cu valoarea true sau false -->
+    <div class="option" data-correct="true" onclick="verificaRaspuns(this)">Opțiunea A</div>
+    <div class="option" data-correct="true" onclick="verificaRaspuns(this)">Opțiunea B</div>
+    <div class="option" data-correct="false" onclick="verificaRaspuns(this)">Opțiunea C</div>
+    <div class="option" data-correct="false" onclick="verificaRaspuns(this)">Opțiunea D</div>
+  </div>
+  <p>Răspunsuri corecte: <span id="scor">0</span></p>
+</div>
+
+<script>
+var scor = 0;
+
+function verificaRaspuns(optiune) {
+  var esteCorect = optiune.getAttribute('data-correct') === 'true';
+  if (esteCorect) {
+    scor++;
+    document.getElementById('scor').innerText = scor;
+    alert("Corect! Scorul tău este: " + scor);
+  } else {
+    alert("Greșit! Încearcă din nou.");
+  }
+}
+</script>
+
+</body>
+</html>

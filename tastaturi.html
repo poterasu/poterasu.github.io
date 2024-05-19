@@ -4,10 +4,13 @@
 <title>Tastaturile</title>
 <style>
 body {
-              font-size: 30px;}img{
+              font-size: 30px;
+              color: white;
+              background-image: url('wood.jpg');}img{
 display:block;
 margin-left:auto;
 margin-right:auto;}
+
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -36,13 +39,14 @@ margin-right:auto;}
         <a href="chestionar tastatura.html">test</a>
         <a href="tastaturi.html">pagina tastatura</a>
       </div>
+      
  <h1 align="center">Tastaturile sunt dispozitive periferice de intrare folosite pentru a introduce text și comenzi</h1>
 <dl>
     <dt>Istoria Tastaturii</dt>
     <dd>
         <ul>
             <li>Tastaturile au originat de la mașinile de scris, împrumutând layout-ul lor.</li>
-            <img src="https://m.media-amazon.com/images/I/71msUw3sxlL.jpg"width="300">
+            <img src="https://pngimg.com/uploads/typewriter/typewriter_PNG55.png"width="300">
             <li>Tastatura modernă a fost popularizată odată cu apariția computerelor personale.</li>
             <img src="https://i.pinimg.com/originals/3b/59/c3/3b59c3bb24b03a90d9c09a88079607ba.png"width=300>
         </ul>
@@ -55,7 +59,7 @@ margin-right:auto;}
             <li>Tastaturile cu membrană au un singur strat de cauciuc sau silicon sub taste, care închide un circuit electric la apăsare,au design mai compact.</li>
             <img src="https://www.downloadclipart.net/medium/apple-keyboard-png.png" width="500">
             <li>Tastaturile ergonomice sunt proiectate pentru a oferi o poziție mai naturală a mâinilor și încheieturilor.</li>
-            <img src="https://th.bing.com/th/id/R.017a88204a84c66bbd40cfec856eca4d?rik=SVXALa4if7xZOg&pid=ImgRaw&r=0" width="500">
+            <img src="https://www.pngplay.com/wp-content/uploads/13/Ergonomic-Keyboard-Transparent-Free-PNG.png" width="500">
         </ul>
     </dd>
 </dl>
@@ -69,7 +73,15 @@ function submitMessage() {
   var message = document.getElementById('messageBox').value;
   alert( message);
 }
-//a
 </script>
+<div>
+                <button onclick="darkMode()">Darkmode</button>
+            </div>
+            <script>
+                function darkMode() {
+                    var element = document.body;
+                    element.classList.toggle("dark-mode");
+                }
+            </script>
 </body>
 </html>

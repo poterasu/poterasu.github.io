@@ -2,7 +2,9 @@
 <head>
     <style>
         body {
-              font-size: 30px;}img{
+              font-size: 30px;
+              color: white;
+              background-image: url('wood.jpg');}img{
 display:block;
 margin-left:auto;
 margin-right:auto;}
@@ -30,9 +32,11 @@ margin-right:auto;}
 <title>display</title>
 <script>
 function schimba_culoarea() {
+
   var colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink', 'cyan', 'magenta', 'lime'];
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
   document.body.style.backgroundColor = randomColor;
+  document.body.style.backgroundImage = 'none'; 
 }
 </script>
 </head>
@@ -56,7 +60,7 @@ function schimba_culoarea() {
         <dd>
             <ul>
                 <li>aceste display-uri contineau tunuri de electroni care emitau fascicule de electroni pentru a arata o imagine.</li>
-                <img src="monitor.gif" width="500">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/3173348/crt-monitor-clipart-md.png" width="400">
                 <li>au fost inlocuite de monitoare lcd din cauza consumului redus de energie,designului compact,si rezolutiei ridicate.</li>
             </ul>
         </dd>
@@ -75,7 +79,7 @@ function schimba_culoarea() {
     <ul>
         <li>Aceste display-uri folosesc micro-capsule care conțin pigmenți albi și negri într-un lichid clar.</li>
         <li>Sunt folosite la citirea cărților electronice, deoarece folosesc energie doar când este schimbată imaginea și au proprietăți similare cu hârtia.</li>
-        <img src="https://www.eink.com/upload/2023_03_20/3_20230320083211xzzzo41hF1.gif" width="500">
+        <img src="https://www.eposts.co/wp-content/uploads/2016/08/how-eink-works.png" width="500">
     </ul>
 </dd>
 <button onclick="schimba_culoarea()">apasa pe buton pentru a schimba culoarea paginii</button>
